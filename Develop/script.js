@@ -6,7 +6,6 @@ function generatePassword() {
     alert("Not valid");
     return;
   }
-  console.log(passwordLength)
 
   let confirmedLowercase = window.confirm("LowerCase");
   let confirmedUppercase = window.confirm("UpperCase");
@@ -37,19 +36,15 @@ function generatePassword() {
 
   if (confirmedLowercase) {
     emptyPassword += lowercase;
-    console.log(emptyPassword);
   }
   if (confirmedUppercase) {
     emptyPassword += uppercase;
-    console.log(emptyPassword);
   }
   if (confirmedNumber) {
     emptyPassword += numbers;
-    console.log(emptyPassword);
   }
   if (confirmedSymbols) {
     emptyPassword += symbol;
-    console.log(emptyPassword);
   }
 
   for (var i = 0; i < passwordLength; i++) {
@@ -59,7 +54,6 @@ function generatePassword() {
           Math.random() * emptyPassword.length
         )
       );
-    console.log(password)
   }
   return password;
 }
